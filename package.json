@@ -1,0 +1,28 @@
+{
+  "name": "react-dump",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/parser": "^7.14.7",
+    "@babel/traverse": "^7.14.7",
+    "@types/node": "^16.0.0",
+    "argparse": "^2.0.1",
+    "axios": "^0.21.1",
+    "bottleneck": "^2.19.5",
+    "cheerio": "^1.0.0-rc.10",
+    "yargs": "^17.0.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@typescript-eslint/parser": "^4.28.1",
+    "eslint": "^7.30.0",
+    "typescript": "^4.3.5"
+  }
+}
