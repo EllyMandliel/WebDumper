@@ -1,10 +1,10 @@
 {
-  "name": "webdumper",
+  "name": "@yokra/webdumper",
   "version": "1.0.1",
   "description": "",
   "main": "dist/index.js",
   "bin": {
-    "webdumper": "node ./dist/index.js"
+    "webdumper": "./dist/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
