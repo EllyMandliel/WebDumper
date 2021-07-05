@@ -2,5 +2,4 @@ dist
 node_modules
 .eslintrc.json
 .prettierrc
-tsconfig.json
 .env
