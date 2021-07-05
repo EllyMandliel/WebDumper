@@ -1,19 +1,16 @@
-import { ArgumentParser } from 'argparse';
+#!/usr/bin/env node
+import yargs from 'yargs/yargs';
 
 import { emptyDirectory } from './fs-helpers';
 import { Unpacker } from './unpacker/unpacker';
 
 (async () => {
-    const parser = new ArgumentParser({
-        description: 'Web Unpacker - A webpack scraper & unpacker.',
-    });
-    parser.add_argument('-o', '--out', {
-        help: 'output directory',
-        required: true,
-    });
-    parser.add_argument('-u', '--url', { help: 'Website URL', required: true });
 
-    const { out, url } = parser.parse_args();
+    const { out, url } = await yargs(process.argv.slice(2)).options({
+        url: { type: 'string', demandOption: true, alias: 'u' },
+        out: { type: 'string', demandOption: true, alias: 'o' },
+    }).argv;
+
     await emptyDirectory(out);
     const unpacker = new Unpacker(url, out);
     await unpacker.start();
