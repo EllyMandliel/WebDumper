@@ -1,6 +1,6 @@
 {
   "name": "@yokra/webdumper",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "dist/index.js",
   "bin": {
@@ -12,8 +12,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@babel/parser": "^7.14.7",
-    "@babel/traverse": "^7.14.7",
     "@types/node": "^16.0.0",
     "@types/yargs": "^17.0.1",
     "axios": "^0.21.1",

@@ -11,7 +11,8 @@ import { Unpacker } from './unpacker/unpacker';
         out: { type: 'string', demandOption: true, alias: 'o' },
     }).argv;
 
-    await emptyDirectory(out);
+    if(out !== '.')
+        await emptyDirectory(out);
     const unpacker = new Unpacker(url, out);
     await unpacker.start();
 })();
